@@ -22,7 +22,7 @@ df = [
 ]
 
 # Створення DataFrame з даних
-df = spark.createDataFrame(data)
+df = spark.createDataFrame(df)
 
 
 # Перегляд перших 5 рядків для ознайомлення з даними
