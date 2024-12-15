@@ -6,12 +6,24 @@ from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.evaluation import RegressionEvaluator
 import matplotlib.pyplot as plt
 import seaborn as sns
+from pyspark.sql import Row
 
 # Створення Spark-сесії
 spark = SparkSession.builder.appName("DisasterAnalysis").getOrCreate()
 
+
 # Завантаження даних з CSV
-df = spark.read.csv("path_to_emdat.csv", header=True, inferSchema=True)
+df = [
+    Row(Disaster_Type="Earthquake", Date="2010-01-12", Country="Haiti", Fatalities=230000, Economic_Losses=800000000, Total_Affected=300000),
+    Row(Disaster_Type="Flood", Date="2004-12-26", Country="India", Fatalities=10000, Economic_Losses=500000000, Total_Affected=200000),
+    Row(Disaster_Type="Storm", Date="2011-03-11", Country="Japan", Fatalities=20000, Economic_Losses=200000000, Total_Affected=500000),
+    Row(Disaster_Type="Drought", Date="2012-07-10", Country="Somalia", Fatalities=25000, Economic_Losses=150000000, Total_Affected=150000),
+    Row(Disaster_Type="Flood", Date="2010-09-20", Country="China", Fatalities=2000, Economic_Losses=300000000, Total_Affected=100000)
+]
+
+# Створення DataFrame з даних
+df = spark.createDataFrame(data)
+
 
 # Перегляд перших 5 рядків для ознайомлення з даними
 df.show(5)
