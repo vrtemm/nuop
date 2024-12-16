@@ -2,6 +2,9 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import to_date, col, sum
 import matplotlib.pyplot as plt
 import seaborn as sns
+from google.colab import drive
+drive.mount('/content/drive')
+
 
 # Create Spark session
 spark = SparkSession.builder.appName("DisasterAnalysis").getOrCreate()
