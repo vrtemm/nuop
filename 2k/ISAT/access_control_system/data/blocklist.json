@@ -1,0 +1,4 @@
+{
+  "blocked_urls": ["malicious.net", "phishing.org"],
+  "blocked_ips": ["127.0.0.2"]
+}

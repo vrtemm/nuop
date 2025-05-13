@@ -1,0 +1,12 @@
+{
+  "name": "access_control_system",
+  "version": "1.0.0",
+  "description": "## Features - Signature-based threat detection - Manual URL/IP blocking - Traffic logging with timestamps and actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

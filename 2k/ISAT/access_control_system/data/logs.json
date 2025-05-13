@@ -1,0 +1,16 @@
+[
+  {
+    "timestamp": "2025-05-13T14:52:10.996Z",
+    "ip": "::1",
+    "url": "localhost:8080",
+    "action": "allowed",
+    "threat": "none"
+  },
+  {
+    "timestamp": "2025-05-13T14:52:11.115Z",
+    "ip": "::1",
+    "url": "localhost:8080",
+    "action": "allowed",
+    "threat": "none"
+  }
+]
